@@ -1,18 +1,19 @@
-import random 
+import random
 
 movies = [
     {
-        "Title":"Pokemon",
-        "Genre":"Action/Adventure,Fantasy",
-        "Rating":"10.0",
-        "Mood":"Exciting",
-        "Overview":"Pokémon anime spans Ash Ketchum's 25-year quest and the newer generation led by Liko and Roy."
+        "title": "Pokemon",
+        "genre": "Animation,Adventure",
+        "rating": 9.8,
+        "mood": "Happy",
+        "overview": " Journey/Adventure following Ash then Liko and Roy travelling in a world of creatures."
     },
     {
-        "Title":"The Lion King",
-        "Genre":"Adventure",
-        "Rating":8.7,
-        "Mood":"Exciting"
+        "title": "The Lion King",
+        "genre": "Adventure",
+        "rating": 8.5,
+        "mood": "Exciting",
+        "overview": "A brave young lion overcomes danger and becomes a great king."
     },
     {
         "title": "Finding Nemo",
@@ -90,6 +91,7 @@ def analyse_sentiment(overview):
         return "Negative 😟"
     else:
         return "Neutral 😐"
+
 def display_movie(movie):
 
     print("\n------------------------------")
@@ -107,13 +109,11 @@ def display_movie(movie):
 
     print("------------------------------")
 
-
 def random_recommendation():
 
     movie = random.choice(movies)
     print("\nHere is a random movie for you!")
     display_movie(movie)
-
 
 def recommend_by_genre():
 
@@ -134,7 +134,6 @@ def recommend_by_genre():
             display_movie(movie)
     else:
         print("Sorry, no movies found for that genre.")
-
 
 def recommend_by_mood():
 
